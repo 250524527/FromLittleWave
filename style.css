@@ -1,3 +1,56 @@
+/* ==================================== */
+/* 반응형 CSS (Mobile First)    */
+/* ==================================== */
+
+/* 화면 너비가 600px 이하일 때 적용되는 스타일 */
+@media (max-width: 600px) {
+    
+    /* 1. 기본 컨테이너의 너비를 뷰포트에 꽉 채움 */
+    .terminal-container {
+        width: 95%; /* 약간의 여백을 남김 */
+        max-width: 100%;
+        margin: 10px auto;
+        /* 터미널 테두리 그림자(box-shadow)는 모바일에서 제거하여 성능 개선 */
+        box-shadow: none; 
+    }
+
+    /* 2. 터미널 본문의 패딩을 줄여 공간 확보 */
+    .terminal-body {
+        padding: 10px;
+        min-height: 400px; /* 세로 길이를 충분히 확보 */
+    }
+
+    /* 3. 텍스트 크기 조정 */
+    body {
+        font-size: 14px; /* 기본 폰트 크기를 약간 줄임 */
+    }
+    
+    /* 4. 터미널 헤더 텍스트 크기 조정 */
+    .terminal-header {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+
+    /* 5. 버튼 크기 및 폰트 조정 */
+    .retro-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        /* 모바일에서는 버튼이 너무 커지지 않도록 너비 제한 */
+        max-width: 100%; 
+    }
+    
+    /* 6. 메인 시작 화면 텍스트 크기 조정 (index.html 용) */
+    .start-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .start-message {
+        font-size: 1em;
+    }
+}
+
+
 @font-face {
     font-family: 'RoundedFixedsys';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -610,5 +663,6 @@ th, td {
 
 /* 터치 영역이 캔버스 크기보다 작을 때를 대비해, 캔버스와 컨트롤 영역 전체를 감싸는 컨테이너 스타일 조정 */
 /* #game-container에 대한 스타일링이 되어있어야 합니다. */
+
 
 
