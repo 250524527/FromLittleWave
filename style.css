@@ -85,6 +85,11 @@ body {
     padding: 20px;
     overflow: hidden;
     line-height: 1.2;
+    /* 화면을 벗어나는 내용이 있을 때만 수직 스크롤바를 표시 */
+    overflow-y: auto; 
+    
+    /* 또는 항상 수직 스크롤바를 표시하고 싶다면 'scroll'을 사용합니다. */
+    /* overflow-y: scroll; */
 }
 body::after {
     content: '';
@@ -663,6 +668,7 @@ th, td {
 
 /* 터치 영역이 캔버스 크기보다 작을 때를 대비해, 캔버스와 컨트롤 영역 전체를 감싸는 컨테이너 스타일 조정 */
 /* #game-container에 대한 스타일링이 되어있어야 합니다. */
+
 
 
 
