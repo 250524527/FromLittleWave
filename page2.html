@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="page2">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">접근 권한 획득</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-2">
+        <p>안녕! 나는 여름에만 만날 수 있지.</p>
+        <p>나는 내가 있는 땅의 기분에 따라 </p>
+        <p>예쁜 옷으로 갈아입을 수 있어.</p>
+        <p>그런데 사실 그 옷은 진짜 옷이 아니라,</p>
+        <p>내 속을 감싸주는 마법 망토 같은 거야!</p>
+        <p>내 이름은 뭘까?</p>
+        <br><br>
+        <p>※ 정답은 '한글 2단어'로 입력하세요.</p>
+        <h2>************************</h2>
+        <h3>&emsp;&emsp;HINT CODE : 2024년 여름, 귤</h3>
+        <h2>////////////////////////</h2>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

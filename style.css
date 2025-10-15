@@ -1,0 +1,614 @@
+@font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-color: #000000;
+    --text-color: #00ff00;
+    --border-color: #00a4b8;
+    --panel-bg: #c0c0c0;
+    --panel-border: #808080;
+    --panel-shadow: #fff;
+    --input-bg: #d0d0d0;
+    --input-border: #404040;
+    --success-color: #00ff00;
+    --fail-color: #ff3300;
+}
+.hidden {
+    display: none;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: RoundedFixedsys;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 1.2;
+}
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,255,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 99;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.05), rgba(0, 0, 255, 0.05));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+.terminal-container {
+    background-color: var(--panel-bg);
+    border: 3px solid var(--panel-border);
+    box-shadow: inset -2px -2px var(--panel-shadow), inset 2px 2px var(--panel-shadow), 5px 5px 0 0 var(--panel-border);
+    padding: 8px;
+    width: 90%;
+    max-width: 800px;
+}
+.terminal-header {
+    background-color: #000080;
+    color: #fff;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 2px solid #000;
+}
+.terminal-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid var(--border-color);
+}
+pre {
+    margin: 0;
+    font-family: inherit;
+    white-space: pre-wrap;
+}
+.quiz-question {
+    margin-top: 20px;
+}
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.prompt {
+    color: var(--text-color);
+    margin-right: 5px;
+}
+.answer-input {
+    background-color: var(--input-bg);
+    border: 2px solid var(--input-border);
+    color: #000;
+    font-family: RoundedFixedsys;
+    font-size: 1em;
+    padding: 3px;
+    width: 100%;
+    box-shadow: inset -1px -1px var(--input-border), inset 1px 1px var(--input-border);
+}
+.answer-input:focus {
+    outline: none;
+    border-color: #000;
+}
+.quiz-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.retro-button {
+    background-color: var(--panel-bg);
+    border: 2px outset var(--panel-shadow);
+    color: #000;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: -2px -2px #fff, 2px 2px #808080, -2px 2px #fff, 2px -2px #808080;
+}
+.retro-button:active {
+    border-style: inset;
+    box-shadow: inset 2px 2px #808080, inset -2px -2px #fff;
+}
+/* New styles for JS */
+.blinking-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: var(--text-color);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+.result-message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.result-success {
+    color: var(--success-color);
+}
+.result-fail {
+    color: var(--fail-color);
+}
+#storySection p {
+    margin: 0;
+}
+#promptContinue {
+    position: absolute;
+    bottom: 5%;
+    right: 20px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+/* pageqr ***************************************************/
+.qrcode {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.answerBang {
+    color: #ff00ff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.div-border {
+    border: 1px solid;
+    padding: 0px 0.5em 1em 0.5em;
+    margin: 3%;
+}
+
+.question-room-7 {
+    padding: 2em 0.5em;
+}
+/* pageqr ***************************************************/
+
+/* Table Styles for DOS Theme */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 셀 경계를 합쳐서 깔끔하게 만듭니다. */
+    margin-top: 15px;
+    color: var(--text-color);
+}
+table caption {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid var(--border-color);
+    background-color: #000040; /* DOS 헤더 색상 */
+    color: #ffffff; /* 흰색 글씨 */
+    text-align: center;
+}
+table, th, td {
+    border: 4px solid var(--border-color);
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* 방(room) 타일 컨테이너 */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: auto;
+    margin: 50px auto;
+}
+
+/* 개별 방(room) 타일 */
+.room-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--dos-window-bg);
+    border-top: 2px solid var(--dos-border-light);
+    border-left: 2px solid var(--dos-border-light);
+    border-bottom: 2px solid var(--dos-border-dark);
+    border-right: 2px solid var(--dos-border-dark);
+    box-shadow: 
+        inset 1px 1px var(--dos-border-light), 
+        inset -1px -1px var(--dos-border-dark);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.room-number {
+    font-size: 0.8em;
+    color: var(--dos-border-dark);
+    margin-bottom: 5px;
+}
+
+/* 잠금 해제된 방 스타일 */
+.room-card.unlocked {
+    cursor: pointer;
+    border-top: 2px solid var(--dos-blue);
+    border-left: 2px solid var(--dos-blue);
+    border-bottom: 2px solid var(--dos-border-dark);
+    border-right: 2px solid var(--dos-border-dark);
+}
+
+.room-card.unlocked:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 1px 1px var(--dos-border-light), 
+        inset -1px -1px var(--dos-border-dark),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 잠금된 방 스타일 */
+.room-card.locked {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: grayscale(100%);
+}
+
+
+/* page8 ***************************************************/
+/* 터미널 전용 DOS 창 스타일 */
+.terminal-window {
+    padding: 0px 0.5em 1em 0.5em;
+    margin: 3%;
+    margin: auto;
+}
+
+/* 터미널 화면 스타일 */
+.terminal-screen {
+    padding: 10px;
+    color: #00ff00;
+    overflow-y: auto;
+}
+
+/* 채팅 컨테이너 */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 메시지 스타일 */
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 5px;
+    word-break: break-word;
+    /* 메시지 구분선 */
+    border-bottom: 1px dashed #008000;
+}
+
+/* 마지막 메시지에는 구분선 없애기 */
+.message:last-child {
+    border-bottom: none;
+}
+
+/* 접두사([USER], [SYSTEM]) 스타일 */
+.message-prefix {
+    font-weight: bold;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+/* 사용자 메시지 접두사 */
+.message.user .message-prefix, .message.user .message-content, .message.user .message-time {
+    color: #ff00ff; /* 마젠타 색상 */
+}
+
+/* 시스템 메시지 접두사 */
+.message.system .message-prefix {
+    color: #00ff00;
+}
+
+/* 메시지 내용 스타일 */
+.message-content {
+    flex-grow: 1;
+}
+
+/* 시간 스타일 */
+.message-time {
+    margin-left: 10px;
+    font-size: 0.9em;
+    flex-shrink: 0;
+}
+
+
+
+
+/* love ***************************************************/
+/* 전체 컨테이너 및 배경 설정 */
+.playlist-container {
+    background-color: #121212; /* 어두운 배경색 */
+    color: #ffffff; /* 흰색 글씨 */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* 화면 크기 제한 */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* 상단 헤더 부분 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header .back-arrow {
+    font-size: 24px;
+}
+
+.header .profile {
+    display: flex;
+    align-items: center;
+}
+
+.header .profile-name {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.header .profile-pic {
+    width: 24px;
+    height: 24px;
+    background-color: #38c172; /* 초록색 원 */
+    border-radius: 50%;
+}
+
+/* 재생 버튼 영역 */
+.play-button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.play-button-wrapper {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-button-icon {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #ccc; /* 연한 회색 삼각형 */
+    transform: translateX(3px); /* 가운데 정렬을 위한 미세 조정 */
+}
+
+/* 재생목록 추가 버튼 */
+.add-song-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #38c172;
+}
+
+.add-song-button span {
+    margin-right: 5px;
+}
+
+/* 재생목록 리스트 */
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.song-artist-duration {
+    display: flex;
+    font-size: 12px;
+    color: #888;
+}
+
+.song-artist {
+    margin-right: 5px;
+}
+
+.song-options {
+    color: #888;
+    font-size: 18px;
+}
+
+/* 현재 재생 중인 곡 */
+.song-item.playing .song-title {
+    color: #38c172; /* 초록색 */
+}
+
+/* 하단바 (미니 플레이어) */
+.mini-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.mini-player-info {
+    font-size: 12px;
+}
+
+.mini-player-controls .play-button-icon {
+    border-left-color: #fff;
+    transform: translateX(0);
+}
+
+
+/* 1. main ***************************************************/
+/* 메인 시작 화면 스타일 */
+.terminal-body.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 화면 높이에 맞춰 중앙 정렬 */
+    height: 80vh; 
+    padding: 20px;
+}
+
+.start-title {
+    color: #00ff41; /* 밝은 녹색 */
+    font-size: 2.5em;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+    margin-bottom: 30px;
+    animation: blink 1s steps(1, end) infinite; /* 깜빡이는 효과 */
+}
+
+.start-message {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.retro-button.start-button {
+    /* 버튼이 더 잘 보이도록 크기 조정 */
+    padding: 15px 30px; 
+    font-size: 1.2em;
+}
+
+.start-footer {
+    color: #555;
+    font-size: 0.8em;
+    margin-top: 50px;
+}
+
+/* 텍스트 깜빡임 효과 */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+/* 2. packman game ***************************************************/
+#game-container {
+    /* border: 3px solid white; /* 게임 테두리 */
+    position: relative;
+    background-color: black;
+}
+
+#gameCanvas {
+    display: block;
+    background-color: black;
+}
+
+#score, #lives {
+    position: absolute;
+    color: yellow;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+#score {
+    top: 0;
+    left: 0;
+}
+
+#lives {
+    top: 0;
+    right: 0;
+}
+
+/* style.css 에 추가 */
+
+#controls {
+    position: absolute; /* 캔버스 주변에 배치 */
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+#controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none; /* 모바일에서 드래그 방지 */
+}
+
+.horizontal-btns {
+    display: flex;
+    gap: 50px; /* 좌우 버튼 간격 */
+}
+
+/* 터치 영역이 캔버스 크기보다 작을 때를 대비해, 캔버스와 컨트롤 영역 전체를 감싸는 컨테이너 스타일 조정 */
+/* #game-container에 대한 스타일링이 되어있어야 합니다. */
+
+

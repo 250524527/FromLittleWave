@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="page4">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">다음 문제로 이동</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-4">
+        <table>
+            <caption>🦋 2024 The First Word 🦋<br>두음법칙은 반대로 되돌리세요</caption>
+            <tr>
+                <td>2/10</td>
+                <td>나들이도 가고 맛있는 것도 먹고 우리 함께 보낸 즐거운 연휴 ♡</td>
+            </tr>
+            <tr>
+                <td>5/17</td>
+                <td>비도 오지 않고 화창했던 서해, 전주순대국밥 존맛 :-)</td>
+            </tr>
+            <tr>
+                <td>4/5</td>
+                <td>처음으로 퇴근하고 올라갔던 인왕산 야간 등반 :-O<br> 
+                    많이 어두워서 중간에 내려왔지만 다음에는 꼭 정상까지 도전!!</td>
+            </tr>
+            <tr>
+                <td>11/7</td>
+                <td>넘넘 예뻤던 안반데기 별 바다! <br>추워서 벌벌 떨었지만 행복했지요 서울로 돌아가기 싫어 :(</td>
+            </tr>
+        </table>
+        <br><br>
+        <p>※ 정답은 '한글 4글자'로 입력하세요.</p>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

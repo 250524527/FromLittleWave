@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="start">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        
+        <div class="terminal-body start-screen">
+            <h1 class="start-title">ACCESS<br> TERMINAL<br> READY</h1>
+            <p class="start-message">데이터 통신을 시작하시겠습니까?</p>
+            
+            <button id="startButton" class="retro-button start-button">
+                [ENTER] YES!!!
+            </button>
+            
+            <p class="start-footer">Loading OS... 100% Complete</p>
+        </div>
+        
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startButton = document.getElementById('startButton');
+            
+            if (startButton) {
+                startButton.addEventListener('click', () => {
+                    // 첫 번째 스토리 페이지(예: page1.html)로 이동
+                    window.location.href = 'http://127.0.0.1:3000/mobile/game.html'; 
+                });
+
+                // Enter 키로도 시작할 수 있도록 추가
+                document.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        window.location.href = 'http://127.0.0.1:3000/mobile/game.html';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="6">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">다음 문제로 이동</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-6">
+        <div class="text-center">
+            <p>[나비의 방]</p>
+            <p>비밀번호는 보안을 위해 선택받은 사람만 <br>알아볼 수 있도록 암호화하였음</p>
+            <div class="div-border">
+                <p>♪ 이달의 노래 ♪</p>
+                <p>나비처럼 날아가볼까 <br>변덕 부리는 바람을 넘어/</p>
+                <p>이런 느낌을 네게도 전할 수 있을까/</p>
+                <p>마음 깊이 잠가 놓은 <br>잊혀진 꿈에 슬퍼하지 마/</p>
+                <p>지금 이대로 날아가 끝까지 가면 돼/</p>
+                
+            </div>
+            <div class="div-border">
+                <p>♬ 게시판 ♬</p>
+                452332/<br>233213/<br>22223241/<br>□□□□□□/
+            </div>
+        </div>
+        <p>※ 정답은 '숫자 6자리'로 입력하세요.</p>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

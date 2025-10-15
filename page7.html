@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="7">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">다음 문제로 이동</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-7">
+        <div class="text-center">
+            <p>[선택의 방]</p>
+            <h3>=IF(문제="진실", 0, 1)<br><mark>The yellow one is you.</mark></h3>
+        </div>
+
+        <p>1. 처음으로 함께 걸었던 둘레길의 이름은 '사색에 잠겨 걷는 호젓한 숲길'이다.</p>
+        <p>2. 마카오 카지노에서 돈을 2배 땄다.</p>
+        <p>3. 동해에서 발견한 네잎클로버는 4개이다.</p>
+        <p>4. 첫 번째 네잎클로버는 비자림에서 발견했다.</p>
+        <p>5. <mark>'나'</mark>의 귀 길이는 손가락 2마디이다.</p>
+        <p>6. 함께 지은 태명은 쿵따기이다.</p>
+        <p>7. 은퇴하고 동해에 함께 가기로 약속했다.</p>
+        <p>8. '나'는 500일에 장미꽃을 받았다.</p>
+        <p>9. 판다인형을 구매한 곳은 홍콩이다.</p>
+        <p>10. 영화 '프레디의 피자가게'는 23년 12월 이후에 보러갔다.</p>
+        <p>※ 정답은 '숫자 10자리'로 입력하세요.</p>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

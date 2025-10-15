@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="8">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">다음 문제로 이동</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-8">
+        <div class="text-center">
+            <p>[기억의 방]</p>
+            <p>비밀번호는 보안을 위해 선택받은 사람만 <br>알아볼 수 있도록 암호화하였음</p>
+            <div class="dos-window terminal-window div-border"><br><br>
+                <div class="dos-window-title">
+                    <span class="dos-window-title-text">2025년 5월 23일 금요일</span>
+                </div>
+
+                <div class="dos-text-screen terminal-screen">
+                    <div class="chat-container">
+                        <div class="message system">
+                            <span class="message-prefix">[SYSTEM]</span>
+                            <span class="message-content">ㅋㅋㅋㅋㅋ헐!!!</span>
+                            <span class="message-time">22:17</span>
+                        </div>
+                        <div class="message system">
+                            <span class="message-prefix">[SYSTEM]</span>
+                            <span class="message-content">□□ 사진 정리해서 방금</span>
+                            <span class="message-time">22:17</span>
+                        </div>
+                        <div class="message system">
+                            <span class="message-prefix">[SYSTEM]</span>
+                            <span class="message-content">[삭제된 메시지]</span>
+                            <span class="message-time">22:17</span>
+                        </div>
+                        <div class="message user">
+                            <span class="message-prefix">[USER]</span>
+                            <span class="message-content">□□ 돈까스야도 올렷네 ㅋㅋㅋ</span>
+                            <span class="message-time">22:24</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <br>
+        </div>
+        <p>※ 삭제된 메시지를 복원하여 키워드를 확인하세요.</p>
+        <p>※ 정답은 '영어 대문자 4글자'로 입력하세요.</p>
+        <p>※ □□ 가 기다리고 있어.</p>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

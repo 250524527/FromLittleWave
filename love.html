@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="love">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+            <div class="answerBang text-center">
+                <p>♬♪♬♪</p>
+                <p>어디선가 음악 소리가 들린다.</p>
+            </div>
+
+            <!-- 재생목록 -->
+            <div class="playlist-container">
+                <div class="header">
+                    <span class="back-arrow">&lt;</span>
+                    <div class="profile">
+                        <span class="profile-name">WYMM</span>
+                        <div class="profile-pic"></div>
+                    </div>
+                </div>
+                <div class="add-song-button">
+                    <span>Floor 2</span>
+                </div>
+                <ul class="song-list">
+                    <li class="song-item playing">
+                        <div class="song-info">
+                            <span class="song-title">초행</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">에이든</span>
+                                <span>2:58</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <span class="song-title">동반자</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">태진아</span>
+                                <span>3:10</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <span class="song-title">오늘만 I LOVE YOU</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">BOYNEXTDOOR</span>
+                                <span>2:42</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <span class="song-title">오르골 Life Is Still Going On</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">NCT DREAM</span>
+                                <span>3:39</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <span class="song-title">검은행복</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">윤미래</span>
+                                <span>4:20</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    <li class="song-item">
+                        <div class="song-info">
+                            <span class="song-title">색안경 (STEREOTYPE)</span>
+                            <div class="song-artist-duration">
+                                <span class="song-artist">STAYC(스테이씨)</span>
+                                <span>3:12</span>
+                            </div>
+                        </div>
+                        <span class="song-options">&#8942;</span>
+                    </li>
+                    </ul>
+            </div>
+
+            
+            
+            <div id="storySection" class="hidden" style="text-align: right;">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="resetButton" class="retro-button">처음으로</button>
+            </div>
+
+        </div>
+    </div>
+    
+    <template id="question-text-love">
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>

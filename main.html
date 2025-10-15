@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER PROJECT 👽</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body id="page1">
+    <div class="terminal-container">
+        <div class="terminal-header">WYMM>_ WINTER PROJECT.EXE 👽</div>
+        <div class="terminal-body">
+
+            <div id="quizSection">
+                <div class="quiz-question">
+                    <div id="questionContent"></div>
+                    <div class="input-line">
+                        <span class="prompt">WYMM>_ </span>
+                        <input type="text" id="answerInput" class="answer-input" placeholder="여기에 정답을 입력하세요...">
+                        <span id="cursor" class="blinking-cursor"></span>
+                    </div>
+                </div>
+                <div id="result" class="result-message"></div>
+                <div class="quiz-controls">
+                    <button id="checkButton" class="retro-button">정답 확인</button>
+                </div>
+            </div>
+
+            <div id="storySection" class="hidden">
+                <div id="storyText"></div>
+                <div id="promptContinue" class="hidden">
+                    <p>Press Enter or click to continue...</p>
+                    <span id="cursorContinue" class="blinking-cursor"></span>
+                </div>
+                <br><button id="finalButton" class="retro-button hidden">다음 문제로 이동</button>
+            </div>
+        </div>
+    </div>
+    
+    <template id="question-text-1">
+        <p>1. 모든 문제를 꼼꼼하게 읽어주세요.</p>
+        <p>2. 아이템 <mark>'뉴비의 가방'</mark>을 사용하여,<br> '제일 가까운 별의 상점'에 도착하세요.</p>
+        <p>3. 프로도처럼 포기하지 말아 주세요.</p>
+        <p>4. 문제의 정답은 1♡♡日 입니다.</p>
+        <p>5. 행운을 빕니다.</p>
+        <p>※ 정답은 '숫자 6자리'로 입력하세요.</p>
+        <h2>************************</h2>
+        <h3>&emsp;&emsp;뉴비의 가방</h3>
+        <h4>
+            &emsp;&emsp;아이템 코드 &emsp;&emsp;: QJHSJKJLK156D<br>
+            &emsp;&emsp;사용 유효기간 : 2026. 1. 13.
+        </h4>
+        <h2>////////////////////////</h2>
+
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
