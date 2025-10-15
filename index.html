@@ -32,17 +32,18 @@
             if (startButton) {
                 startButton.addEventListener('click', () => {
                     // 첫 번째 스토리 페이지(예: page1.html)로 이동
-                    window.location.href = 'http://127.0.0.1:3000/mobile/game.html'; 
+                    window.location.href = '/game.html'; 
                 });
 
                 // Enter 키로도 시작할 수 있도록 추가
                 document.addEventListener('keypress', (e) => {
                     if (e.key === 'Enter') {
-                        window.location.href = 'http://127.0.0.1:3000/mobile/game.html';
+                        window.location.href = '/game.html';
                     }
                 });
             }
         });
     </script>
 </body>
+
 </html>
