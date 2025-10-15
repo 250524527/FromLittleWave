@@ -186,7 +186,7 @@ function checkCherryCollision() {
             cherry.visible = false;
             
             alert("🍀 네잎클로버를 획득하였습니다! 다른 차원으로 이동합니다.");
-            window.location.href = "http://127.0.0.1:3000/mobile/main.html";
+            window.location.href = "/FromLittleWave/main.html";
         }
     }
 }
@@ -197,7 +197,7 @@ function checkWinCondition() {
         setTimeout(() => {
             // 점수가 없으므로 최종 점수 표시는 제거
             alert(`🎉 축하합니다! 모든 점을 먹었어요!`);
-            window.location.href = "http://127.0.0.1:3000/mobile/main.html";
+            window.location.href = "/FromLittleWave/main.html";
         }, 100);
     }
 }
@@ -248,4 +248,5 @@ function resetGamePositions() {
 }
 
 resetGamePositions();
+
 gameLoop();
