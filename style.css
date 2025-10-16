@@ -218,7 +218,7 @@ pre {
 }
 #promptContinue {
     position: absolute;
-    bottom: 2%;
+    bottom: 20px;
     right: 20px;
     font-size: 1.2em;
     display: flex;
@@ -683,6 +683,7 @@ th, td {
 
 /* 터치 영역이 캔버스 크기보다 작을 때를 대비해, 캔버스와 컨트롤 영역 전체를 감싸는 컨테이너 스타일 조정 */
 /* #game-container에 대한 스타일링이 되어있어야 합니다. */
+
 
 
 
