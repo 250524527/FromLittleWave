@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nextUrl: "archive.html"
         },
         'code5': {
-            correctAnswer: '1110010001',
+            correctAnswer: '0001101110',
             unlockKey: 'unlocked_code5',
             successMsg: "🔓 선택의 방 클리어에 성공했습니다!",
             nextUrl: "archive.html"
